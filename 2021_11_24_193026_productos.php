@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Prueba extends Migration
+class Productos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,13 @@ class Prueba extends Migration
      */
     public function up()
     {
-        //
+        schema::create('Productos', function(Blueprint $table){
+            $table->id();
+            $table->string('NombreProducto');
+            $table->Text('Descripción');
+            $table->string('Precio');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class Prueba extends Migration
      */
     public function down()
     {
-        //
+        schema::dropIfExists('Productos');
     }
 }
