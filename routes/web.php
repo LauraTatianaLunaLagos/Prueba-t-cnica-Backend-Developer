@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/producto', function () {
+    return view('producto.index');
+});
+
+Auth::routes();
+
+Route::resource('Productos',App\Http\Controllers\ProductoController::class);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
