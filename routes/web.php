@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+  //  return view('welcome');
+//});
+
+Route::get('/', IndexComponent::class);
+  
 
 Route::get('/producto', function () {
     return view('producto.index');

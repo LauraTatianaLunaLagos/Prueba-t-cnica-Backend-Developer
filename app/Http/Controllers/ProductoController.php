@@ -95,6 +95,7 @@ class ProductoController extends Controller
             ->with('success', 'Producto updated successfully');
     }
 
+    
     /**
      * @param int $id
      * @return \Illuminate\Http\RedirectResponse
